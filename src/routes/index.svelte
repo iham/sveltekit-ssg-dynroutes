@@ -1,46 +1,20 @@
 <script context="module">
   export const prerender = true;
-  export async function load({ fetch }) {
-    const res = await fetch('/api');
-
-  if (res.ok) return { props: { users: await res.json() } };
-  return {
-    status: res.status,
-    error: new Error()
-   };
-  };
-</script>
-
-<script>
-  export let users;
 </script>
 
 <main>
-  {#each users as { avatar, lastName }}
-  <a sveltekit:prefetch href={`/user/${lastName}`} class="box">
-    <img src={avatar} alt={lastName} />
-    <h2>{lastName}</h2>
-  </a>
-  {/each}
+  <h1>HOME</h1>
+  <hr />
+  <div>A website to find user profiles</div>
 </main>
 
 <style>
   main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  }
-  .box {
-  padding: 0.25rem;
-  margin: 1.5rem;
-  color: salmon;
-  box-shadow: 4px 5px 11px 2px lightgray;
-  }
-  .box:hover {
-  box-shadow: 4px 5px 11px 10px lightgray;
-  }
-  img {
-  width: 15rem;
-  object-fit: contain;
+    font-size: 1.5rem;
+    margin: 4rem;
+    padding: 2rem;
+    color: gray;
+    justify-content: center;
+    box-shadow: 4px 5px 11px 10px lightgray;
   }
 </style>
