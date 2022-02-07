@@ -1,24 +1,18 @@
 <script context="module">
-  export const prerender = true;
-
-  import faker from "faker";
+  // export const hydrate = true;
+  // export const prerender = false;
+  // export const router = true;
 
   export async function load({ fetch, params }) {
     const { lastName } = params;
-    return {
-      props: {
-        user: {
-          lastName,
-          firstName: faker.name.firstName(),
-          avatar: `https://avatars.dicebear.com/api/human/${lastName}.svg`,
-          title: faker.name.title(),
-          phone: faker.phone.phoneNumber(),
-          email: faker.internet.email(),
-        }
-      }
-    }
-  }
+    const res = await fetch(`/api/${lastName}.json`);
 
+    if (res.ok) return { props: { user: await res.json() } };
+    return {
+      status: res.status,
+      error: new Error(),
+    };
+  }
 </script>
 
 <script>

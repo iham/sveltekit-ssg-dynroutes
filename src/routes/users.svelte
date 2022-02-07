@@ -1,20 +1,16 @@
 <script context="module">
-  export const prerender = true;
-
-  import faker from "faker";
+  // export const hydrate = true;
+  // export const prerender = false;
+  // export const router = true;
 
   export async function load({ fetch }) {
-    return {
-      props: {
-        users: [...Array(50)].map(() => {
-          const lastName = faker.name.lastName();
-          return {
-            avatar: `https://avatars.dicebear.com/api/human/${lastName}.svg`,
-            lastName,
-          }
-        })
-      }
-    }
+    const res = await fetch('/api/users.json');
+
+  if (res.ok) return { props: { users: await res.json() } };
+  return {
+    status: res.status,
+    error: new Error()
+   };
   }
 </script>
 
@@ -24,7 +20,7 @@
 
 <main>
   {#each users as { avatar, lastName }}
-    <a sveltekit:prefetch href={`/users/${lastName}`} class="box">
+    <a sveltekit:prefetch href={`/user/${lastName}`} class="box">
       <img src={avatar} alt={lastName} />
       <h2>{lastName}</h2>
     </a>
