@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="Svelte demo app" />
+		<link rel="icon" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content=""><meta name="robots" content="noindex" data-svelte="svelte-1m6jots">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-845d5913.css">
+	<link rel="stylesheet" href="/_app/assets/pages/user/_lastName_.svelte-68128f1d.css">
+	<link rel="modulepreload" href="/_app/start-5a1aa331.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-2bd32843.js">
+	<link rel="modulepreload" href="/_app/chunks/paths-4b3c6e7e.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-2e91f6ea.js">
+	<link rel="modulepreload" href="/_app/pages/user/_lastName_.svelte-d58176f4.js"><script type="module">
+		import { start } from "/_app/start-5a1aa331.js";
+		start({
+			target: document.querySelector("#svelte"),
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-2e91f6ea.js"),
+						import("/_app/pages/user/_lastName_.svelte-d58176f4.js")
+				],
+				url: new URL("http://sveltekit-prerender/user/Metz"),
+				params: {lastName:"Metz"}
+			}
+		});
+	</script>
+	</head>
+	<body>
+		<div id="svelte">
+
+
+
+
+<nav class="svelte-1rhg2al"><a sveltekit:prefetch href="/" class="svelte-1rhg2al">HOME</a>
+  <a sveltekit:prefetch href="/about" class="svelte-1rhg2al">ABOUT</a>
+  <a sveltekit:prefetch href="/users" class="svelte-1rhg2al">USERS</a></nav>
+
+<main class="svelte-ualdpb"><h1 class="svelte-ualdpb">Torrey Metz</h1>
+  <div class="box svelte-ualdpb"><img src="https://avatars.dicebear.com/api/human/Metz.svg" alt="Metz" class="svelte-ualdpb">
+    <ul><li class="svelte-ualdpb">Title: Human Assurance Architect</li>
+      <li class="svelte-ualdpb">Phone: 620-285-6258 x01924</li>
+      <li class="svelte-ualdpb">Email: Santina_Jones55@yahoo.com</li></ul></div>
+</main>
+
+<script type="application/json" data-type="svelte-data" data-url="/api/Metz.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"lastName\":\"Metz\",\"firstName\":\"Torrey\",\"avatar\":\"https:\u002F\u002Favatars.dicebear.com\u002Fapi\u002Fhuman\u002FMetz.svg\",\"title\":\"Human Assurance Architect\",\"phone\":\"620-285-6258 x01924\",\"email\":\"Santina_Jones55@yahoo.com\"}"}</script></div>
+	</body>
+</html>
