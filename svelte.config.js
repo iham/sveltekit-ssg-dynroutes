@@ -9,10 +9,10 @@ const config = {
 		}),
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
-		// browser: {
-		// 	hydrate: false,
-		// 	router: false
-		// },
+		browser: {
+			hydrate: false,
+			router: false
+		},
 
 		// Override http methods in the Todo forms
 		methodOverride: {
