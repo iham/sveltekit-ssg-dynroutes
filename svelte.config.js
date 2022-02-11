@@ -27,7 +27,7 @@ const config = {
 		// 	// project root for gh-pages
 		// 	base: '/sveltekit-ssg-dynroutes'
 		// }
-		// trailingSlash: 'always'
+		trailingSlash: 'never'
 	}
 };
 
