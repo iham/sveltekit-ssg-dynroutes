@@ -18,11 +18,11 @@ const config = {
 		methodOverride: {
 			allowed: ['PATCH', 'DELETE']
 		},
-		// prerender: {
-		// 	createIndexFiles: false,
-		// 	crawl: true,
-		// 	enabled: true,
-		// },
+		prerender: {
+			createIndexFiles: false,
+			crawl: true,
+			enabled: true,
+		},
 		// trailingSlash: 'always'
 	}
 };
