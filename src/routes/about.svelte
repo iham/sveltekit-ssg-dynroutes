@@ -1,4 +1,5 @@
 <script context="module">
+  import { base } from '$app/paths';
   // export const hydrate = true;
   // export const prerender = true;
   // export const router = false;

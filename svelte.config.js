@@ -24,6 +24,9 @@ const config = {
 			crawl: true,
 			enabled: true,
 		},
+		paths: {
+			base: '/sveltekit-ssg-dynroutes'
+		}
 		// trailingSlash: 'always'
 	}
 };

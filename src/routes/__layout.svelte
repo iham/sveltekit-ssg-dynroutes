@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
   import "../app.css";
 </script>
 
@@ -7,9 +8,9 @@
 </svelte:head>
 
 <nav>
-  <a sveltekit:prefetch href="/">HOME</a>
-  <a sveltekit:prefetch href="/about">ABOUT</a>
-  <a sveltekit:prefetch href="/users">USERS</a>
+  <a sveltekit:prefetch href={`${base}/`}>HOME</a>
+  <a sveltekit:prefetch href={`${base}/about`}>ABOUT</a>
+  <a sveltekit:prefetch href={`${base}/users`}>USERS</a>
 </nav>
 
 <slot />

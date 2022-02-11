@@ -1,10 +1,11 @@
 <script context="module">
+  import { base } from '$app/paths';
   // export const hydrate = true;
   // export const prerender = false;
   // export const router = true;
 
   export async function load({ fetch }) {
-    const res = await fetch('/api/users.json');
+    const res = await fetch(`${base}/api/users.json`);
 
   if (res.ok) return { props: { users: await res.json() } };
   return {
@@ -20,7 +21,7 @@
 
 <main>
   {#each users as { avatar, lastName }}
-    <a sveltekit:prefetch href={`/user/${lastName}`} class="box">
+    <a sveltekit:prefetch href={`${base}/user/${lastName}`} class="box">
       <img src={avatar} alt={lastName} />
       <h2>{lastName}</h2>
     </a>

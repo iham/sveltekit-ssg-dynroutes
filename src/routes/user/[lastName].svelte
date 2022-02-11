@@ -1,11 +1,12 @@
 <script context="module">
+  import { base } from '$app/paths';
   // export const hydrate = true;
   // export const prerender = false;
   // export const router = true;
 
   export async function load({ fetch, params }) {
     const { lastName } = params;
-    const res = await fetch(`/api/${lastName}.json`);
+    const res = await fetch(`${base}/api/${lastName}.json`);
 
     if (res.ok) return { props: { user: await res.json() } };
     return {
@@ -22,7 +23,7 @@
 <main>
   <h1>{user.firstName} {user.lastName}</h1>
   <div class="box">
-    <img src="{user.avatar}" alt="{user.astName}" />
+    <img src="{user.avatar}" alt="{user.lastName}" />
     <ul>
       <li>Title: {user.title}</li>
       <li>Phone: {user.phone}</li>
