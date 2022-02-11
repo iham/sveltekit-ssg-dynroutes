@@ -7,7 +7,6 @@ const config = {
 			pages: 'docs',
 			assets: 'docs',
 		}),
-		amp: true,
 		// hydrate the <div id="svelte"> element in src/app.html
 		target: '#svelte',
 		// browser: {
@@ -25,6 +24,7 @@ const config = {
 			enabled: true,
 		},
 		paths: {
+			// project root for gh-pages
 			base: '/sveltekit-ssg-dynroutes'
 		}
 		// trailingSlash: 'always'
