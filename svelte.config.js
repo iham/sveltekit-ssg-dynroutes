@@ -23,10 +23,10 @@ const config = {
 			crawl: true,
 			enabled: true,
 		},
-		paths: {
-			// project root for gh-pages
-			base: '/sveltekit-ssg-dynroutes'
-		}
+		// paths: {
+		// 	// project root for gh-pages
+		// 	base: '/sveltekit-ssg-dynroutes'
+		// }
 		// trailingSlash: 'always'
 	}
 };
